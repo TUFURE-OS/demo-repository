@@ -1,9 +1,72 @@
 {
-  "name": "demo-repo",
+  "name": "@tufure/aether-chain",
   "version": "0.2.0",
-  "description": "A sample package.json",
-  "dependencies": {
-    "@primer/css": "17.0.1"
+  "description": "TUFURE OS: AETHER CHAIN — A decentralized, WebAssembly-first peer-to-peer operating system with user-owned data, zero-knowledge privacy, and quantum-resistant security. Implements the 'Kernel Without Kernel' philosophy with a tri-layer architecture: Divine Kernel (Go), Emulator Veil (Rust), and Universal WASM Application Layer.",
+  "keywords": [
+    "decentralized OS",
+    "WebAssembly",
+    "WASM",
+    "libp2p",
+    "ZK-proofs",
+    "CRDTs",
+    "quantum-resistant",
+    "P2P",
+    "capability-based security",
+    "zero-knowledge",
+    "blockchain OS",
+    "aether",
+    "TUFURE"
+  ],
+  "homepage": "https://tufure.org/aether-chain",
+  "bugs": {
+    "url": "https://github.com/tufure-os/aether-chain/issues"
   },
-  "license": "MIT"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tufure-os/aether-chain.git"
+  },
+  "license": "MIT",
+  "author": "TUFURE Research Collective",
+  "contributors": [
+    "Dr. Elara Voss (Lead Architect)",
+    "Kaito Nakamura (Security Lead)",
+    "Zara Mbeki (Developer Experience)"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "docs/",
+    "README.md"
+  ],
+  "bin": {
+    "aether": "bin/aether-cli.js"
+  },
+  "scripts": {
+    "build": "npx aether build",
+    "dev": "npx aether dev",
+    "test": "npx jest",
+    "docs": "npx typedoc",
+    "lint": "npx eslint src/"
+  },
+  "dependencies": {
+    "libp2p": "^0.45.0",
+    "wasmtime": "^10.0.0",
+    "crdt": "^2.1.3",
+    "snarkyjs": "^0.11.0",
+    "nixpacks": "^0.5.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "@babel/preset-env": "^7.24.0"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "eslint": "^8.50.0",
+    "typedoc": "^0.25.0",
+    "prettier": "^3.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
 }
